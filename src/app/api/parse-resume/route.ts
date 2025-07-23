@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server';
-import { readPdf } from '@/lib/parse-resume-from-pdf/read-pdf';
-import { groupTextItemsIntoLines } from '@/lib/parse-resume-from-pdf/group-text-items-into-lines';
-import { groupLinesIntoSections } from '@/lib/parse-resume-from-pdf/group-lines-into-sections';
-import { extractResumeFromSections } from '@/lib/parse-resume-from-pdf/extract-resume-from-sections';
+import { readPdf } from '../../lib/parse-resume-from-pdf/read-pdf';
+import { groupTextItemsIntoLines } from '../../lib/parse-resume-from-pdf/group-text-items-into-lines';
+import { groupLinesIntoSections } from '../../lib/parse-resume-from-pdf/group-lines-into-sections';
+import { extractResumeFromSections } from '../../lib/parse-resume-from-pdf/extract-resume-from-sections';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';

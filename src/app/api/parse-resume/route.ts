@@ -5,11 +5,9 @@ import { groupTextItemsIntoLines } from '@/lib/parse-resume-from-pdf/group-text-
 import { groupLinesIntoSections } from '@/lib/parse-resume-from-pdf/group-lines-into-sections';
 import { extractResumeFromSections } from '@/lib/parse-resume-from-pdf/extract-resume-from-sections';
 
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
+// NEW: Route Segment Config (replaces export const config)
+export const runtime = 'nodejs'; // Required for file operations
+export const dynamic = 'force-dynamic'; // Disable static caching
 
 async function bufferFromStream(stream: Readable): Promise<Buffer> {
   const chunks: Buffer[] = [];
